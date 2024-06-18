@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VanilaJS</title>
+    <style>
+      .btn {
+        text-align: center;
+      }
+      .newBtn {
+        background-color: pink;
+        border: none;
+        text-align: center;
+        color: magenta;
+      }
+      .newBtn:hover {
+        background-color: turquoise;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn">
+      <button id="btn" onclick="changeButtonText('btn')" onblur="initialBtn()">
+        Click me!
+      </button>
+    </div>
+    <script>
+      const changeButtonText = (id = "btn") => {
+        const btn = document.getElementById(id);
+        btn.innerHTML = "i love my helena!";
+        btn.className = "newBtn";
+      };
+
+      const initialBtn = (id = "btn") => {
+        const btn = document.getElementById(id);
+        btn.innerText = "Click me!";
+        btn.className = "btn";
+      };
+    </script>
+  </body>
+</html>
